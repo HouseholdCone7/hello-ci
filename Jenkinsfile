@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'npm install --force'
+                sh 'rm -rf node_modules && npm ci'
             }
         }
         stage('Test') {
